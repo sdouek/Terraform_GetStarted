@@ -26,3 +26,10 @@ resource "aws_lambda_permission" "lambda_s3_permission" {
   function_name = aws_lambda_function.my_lambda_function.arn
   principal     = "s3.amazonaws.com"
 }
+
+# Module: API Gateway
+module "api_gateway" {
+  source = "./modules/api_gateway"
+  api_name = var.api_name
+  lambda_function_name =aws_lambda_function.my_lambda_function.lambda_name
+}
