@@ -14,3 +14,8 @@ variable "lambda_name" {
   description = "Name for the Lambda function"
   default     = "Sara-lambda-function"
 }
+
+variable "api_name" {
+  description = "Name for the API Gateway"
+  default     = "Sara-api-gateway"
+}
